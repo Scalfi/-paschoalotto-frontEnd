@@ -54,11 +54,7 @@
                 </v-col>
               </v-row>
               <v-row>
-                <v-col
-                  cols="4"
-                  v-for="boleto in contrato.value.boletos"
-                  :key="boleto.idBoleto"
-                >
+                <v-col cols="4" v-for="boleto in contrato.value.boletos" :key="boleto.idBoleto">
                   <v-card max-width="300">
                     <v-card-subtitle>
                       <b>Número boleto:</b>
@@ -89,14 +85,19 @@
       </v-row>
     </v-content>
     <v-footer fixed padless absolute>
-      <v-col class="text-center" cols="12">
-        <h5>
-          Desenvolvido por -
-          <font color="#1976d2">Gabriel Scalfi</font>
-          ©
-          {{ new Date().getFullYear() }}
-        </h5>
-      </v-col>
+      <v-row>
+        <v-col class="text-center">
+          <h5>
+            Desenvolvido por -
+            <font color="#1976d2">Gabriel Scalfi</font>
+            ©
+            {{ new Date().getFullYear() }}
+          </h5>
+        </v-col>
+        <v-col  class="text-center">
+          <h5>Telefone para contato: (xx) xxxxx-xxxx </h5>
+        </v-col>
+      </v-row>
     </v-footer>
   </div>
 </template>
