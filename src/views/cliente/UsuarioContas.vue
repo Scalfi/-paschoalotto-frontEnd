@@ -28,7 +28,7 @@
 
             <v-card-text>
               <v-row>
-                <v-col cols="4">
+                <v-col cols="4" >
                   <b>Data vencimento do contrato:</b>
                   R$ {{ contrato.value.dataVencimentoContrato }}
                 </v-col>
@@ -53,9 +53,9 @@
                   R$ {{ contrato.value.dataVencimentoContrato }}
                 </v-col>
               </v-row>
-              <v-row>
-                <v-col cols="4" v-for="boleto in contrato.value.boletos" :key="boleto.idBoleto">
-                  <v-card max-width="300">
+              <v-row >
+                <v-col align="center" justify="center" cols="12" lg="4" md="4"  sm="6" xs="12" v-for="boleto in contrato.value.boletos" :key="boleto.idBoleto">
+                  <v-card  max-width="300">
                     <v-card-subtitle>
                       <b>Número boleto:</b>
                       {{ boleto.idBoleto }}
